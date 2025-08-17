@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SEO Course with AI | Hitesh Swami</title>
+  <meta name="description" content="Level up your career with a modern, hands-on SEO course powered by AI. Live training, real projects, and job-ready skills by Hitesh Swami." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0d12;           /* deep charcoal */
+      --panel:#111522;        /* card surface */
+      --muted:#9aa4b2;        /* muted gray */
+      --text:#e7ecf3;         /* base text */
+      --brand:#6ee7f6;        /* cyan */
+      --brand-2:#a78bfa;      /* soft violet */
+      --accent:#22d3ee;       /* bright cyan */
+      --success:#10b981;
+      --warning:#f59e0b;
+      --danger:#ef4444;
+      --gradient: linear-gradient(135deg, rgba(110,231,246,.25), rgba(167,139,250,.25));
+      --glass: rgba(255,255,255,.06);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --ring: 0 0 0 3px rgba(34,211,238,.25);
+    }
+    html,body{background:radial-gradient(1000px 600px at 10% 0%, rgba(34,211,238,.10), transparent 60%),
+                            radial-gradient(900px 600px at 90% 0%, rgba(167,139,250,.10), transparent 60%),
+                            var(--bg); color:var(--text); font-family:'Poppins',sans-serif;}
+
+    /* Nav */
+    .navbar{background:rgba(11,13,18,.45)!important; backdrop-filter: blur(14px); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-link{color:var(--muted)!important; font-weight:500}
+    .nav-link:hover{color:#fff!important}
+    .btn-brand{background:linear-gradient(90deg,#22d3ee,#a78bfa); color:#0b0d12; border:0; font-weight:700; letter-spacing:.2px}
+    .btn-brand:hover{filter:brightness(1.05)}
+    .badge-soft{background:rgba(34,211,238,.1); color:var(--brand); border:1px solid rgba(34,211,238,.25)}
+
+    /* Hero */
+    .hero{position:relative; padding:110px 0 80px}
+    .glow{position:absolute; inset:-20% -10% auto; height:60vh; pointer-events:none; background:radial-gradient(closest-side, rgba(34,211,238,.18), transparent 70%)}
+    .hero h1{font-weight:800; font-size:clamp(2rem,3.6vw,3.6rem); line-height:1.1}
+    .hero-sub{color:var(--muted)}
+    .hero-card{background:var(--glass); border:1px solid rgba(255,255,255,.06); box-shadow:var(--shadow); border-radius:22px}
+    .hero-list i{font-size:1.1rem}
+
+    /* Section wrappers */
+    section{padding:80px 0}
+    .section-title{font-weight:800; letter-spacing:.2px}
+    .section-sub{color:var(--muted)}
+
+    /* Gradient border cards */
+    .gb{position:relative; border-radius:20px; padding:1px; background:linear-gradient(120deg, #22d3ee55, #a78bfa55)}
+    .gb>.inner{border-radius:19px; background:var(--panel); height:100%}
+
+    /* Feature items */
+    .fi{padding:26px; height:100%}
+    .fi i{font-size:1.4rem}
+
+    /* Curriculum */
+    .timeline{position:relative}
+    .timeline::before{content:""; position:absolute; left:18px; top:0; bottom:0; width:2px; background:linear-gradient(#22d3ee33,#a78bfa33)}
+    .t-item{position:relative; padding-left:54px}
+    .t-dot{position:absolute; left:10px; top:4px; width:18px; height:18px; border-radius:999px; background:linear-gradient(90deg,#22d3ee,#a78bfa); box-shadow:0 0 0 4px rgba(34,211,238,.15)}
+
+    /* Cards */
+    .card-smooth{background:var(--panel); border:1px solid rgba(255,255,255,.06); border-radius:20px; box-shadow:var(--shadow)}
+
+    /* Testimonial */
+    .quote{font-style:italic; color:#cbd5e1}
+
+    /* Pricing */
+    .price{font-size:3rem; font-weight:800}
+
+    /* Footer */
+    footer{border-top:1px solid rgba(255,255,255,.07)}
+
+    /* Floating CTA for mobile */
+    .cta-float{position:fixed; left:0; right:0; bottom:0; z-index:1030; background:rgba(15,18,26,.8); backdrop-filter: blur(10px); border-top:1px solid rgba(255,255,255,.08); padding:12px}
+
+    /* Subtle animations */
+    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+    .floaty{animation:floaty 6s ease-in-out infinite}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <span class="d-inline-flex align-items-center justify-content-center rounded-3" style="width:38px;height:38px;background:var(--gradient);"><i class="bi bi-graph-up text-white"></i></span>
+        <strong>Hitesh&nbsp;Swami</strong>
+      </a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon" style="filter:invert(1)"></span></button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#curriculum">Curriculum</a></li>
+          <li class="nav-item"><a class="nav-link" href="#outcomes">Outcomes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="btn btn-brand ms-lg-2" href="https://hiteshswami.com/step/seo-course-with-ai/" target="_blank" rel="noopener">Enroll Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="glow floaty"></div>
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <span class="badge badge-soft rounded-pill mb-3 px-3 py-2"><i class="bi bi-stars me-2"></i>Advanced SEO + AI</span>
+          <h1>Become a Job‑Ready <span style="background:linear-gradient(90deg,#22d3ee,#a78bfa); -webkit-background-clip:text; background-clip:text; color:transparent;">SEO Specialist</span></h1>
+          <p class="hero-sub mt-3">Master modern SEO with AI: strategy, on‑page, technical, off‑page, local, analytics, and automation. Live, practical sessions led by Hitesh Swami.</p>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <a href="https://hiteshswami.com/step/seo-course-with-ai/" class="btn btn-brand btn-lg px-4">Enroll Now</a>
+            <a href="#curriculum" class="btn btn-outline-light btn-lg px-4" style="border-color:rgba(255,255,255,.18)">View Curriculum</a>
+          </div>
+          <div class="d-flex flex-wrap gap-4 mt-4 text-muted">
+            <span><i class="bi bi-camera-video me-2"></i>Live Cohort</span>
+            <span><i class="bi bi-lightning-charge me-2"></i>100% Practical</span>
+            <span><i class="bi bi-briefcase me-2"></i>Career Support</span>
+          </div>
+          <div class="mt-4 small text-secondary">📞 +91 8054444117 &nbsp;•&nbsp; ✉ hello@hiteshswami.com</div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-card p-3 p-md-4">
+            <div class="gb h-100">
+              <div class="inner p-4 p-md-5">
+                <div class="row g-3 g-md-4">
+                  <div class="col-6">
+                    <div class="fi card-smooth h-100 d-flex flex-column justify-content-between">
+                      <div class="d-flex align-items-center gap-2"><i class="bi bi-robot"></i><strong>AI‑Driven</strong></div>
+                      <p class="mt-2 text-secondary mb-0">Use ChatGPT, Surfer, SEMrush for research & content systems.</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="fi card-smooth h-100">
+                      <div class="d-flex align-items-center gap-2"><i class="bi bi-gear"></i><strong>Technical SEO</strong></div>
+                      <p class="mt-2 text-secondary mb-0">CWV, schema, sitemaps, indexation, JS SEO, logs.</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="fi card-smooth h-100">
+                      <div class="d-flex align-items-center gap-2"><i class="bi bi-link-45deg"></i><strong>Off‑Page</strong></div>
+                      <p class="mt-2 text-secondary mb-0">Clean link building, PR, EEAT & entity growth.</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="fi card-smooth h-100">
+                      <div class="d-flex align-items-center gap-2"><i class="bi bi-pin-map"></i><strong>Local & Intl.</strong></div>
+                      <p class="mt-2 text-secondary mb-0">GMB, citations, multi‑locale & hreflang playbooks.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-4">
+                  <a href="#pricing" class="btn btn-outline-light px-4" style="border-color:rgba(255,255,255,.18)"><i class="bi bi-cash-coin me-2"></i>See Pricing</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Logos / Social proof -->
+  <section class="py-4">
+    <div class="container text-center text-secondary small">
+      <div class="opacity-75">Trusted skills & tools you will master</div>
+      <div class="d-flex flex-wrap justify-content-center gap-4 mt-3">
+        <span class="badge rounded-pill bg-dark-subtle text-dark">GA4</span>
+        <span class="badge rounded-pill bg-dark-subtle text-dark">GSC</span>
+        <span class="badge rounded-pill bg-dark-subtle text-dark">SEMrush</span>
+        <span class="badge rounded-pill bg-dark-subtle text-dark">Ahrefs</span>
+        <span class="badge rounded-pill bg-dark-subtle text-dark">Screaming Frog</span>
+        <span class="badge rounded-pill bg-dark-subtle text-dark">Looker Studio</span>
+        <span class="badge rounded-pill bg-dark-subtle text-dark">ChatGPT</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Outcomes -->
+  <section id="about">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <div class="gb h-100"><div class="inner p-4 p-md-5">
+            <h2 class="section-title">Why this course works</h2>
+            <p class="section-sub">Modern SEO is systems + data + speed. You'll build an SEO engine that ships results: research, briefs, content, tech fixes, and growth reporting.</p>
+            <ul class="list-unstyled mt-4">
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Action-first sessions with worksheets & SOPs</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Real projects and audits to showcase in your portfolio</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Weekly office hours and personalized feedback</li>
+            </ul>
+          </div></div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="card-smooth p-4 h-100 text-center">
+                <div class="display-6 fw-bold">8+</div>
+                <div class="text-secondary">Weeks Live</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card-smooth p-4 h-100 text-center">
+                <div class="display-6 fw-bold">20+</div>
+                <div class="text-secondary">Assets & SOPs</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card-smooth p-4 h-100 text-center">
+                <div class="display-6 fw-bold">6</div>
+                <div class="text-secondary">Capstone Projects</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card-smooth p-4 h-100 text-center">
+                <div class="display-6 fw-bold"><i class="bi bi-briefcase"></i></div>
+                <div class="text-secondary">Job Prep & Mock Interviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curriculum -->
+  <section id="curriculum">
+    <div class="container">
+      <h2 class="section-title text-center">Curriculum Overview</h2>
+      <p class="section-sub text-center mb-5">A streamlined path from foundations to advanced AI‑assisted SEO.</p>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="timeline d-grid gap-4">
+            <div class="t-item">
+              <div class="t-dot"></div>
+              <h5>Module 1 — Strategy & Research</h5>
+              <p class="text-secondary mb-1">SEO mindset, entities, search intent, topic clusters.</p>
+              <small class="text-secondary">Tools: ChatGPT, SEMrush, Ahrefs</small>
+            </div>
+            <div class="t-item">
+              <div class="t-dot"></div>
+              <h5>Module 2 — On‑Page & Content Systems</h5>
+              <p class="text-secondary mb-1">Briefs, internal links, EEAT, content scoring, programmatic SEO.</p>
+              <small class="text-secondary">Tools: Surfer, Frase, NLP APIs</small>
+            </div>
+            <div class="t-item">
+              <div class="t-dot"></div>
+              <h5>Module 3 — Technical SEO</h5>
+              <p class="text-secondary mb-1">CWV, schema, sitemaps, robots, JS SEO, log analysis.</p>
+              <small class="text-secondary">Tools: Screaming Frog, PageSpeed, GSC</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="timeline d-grid gap-4">
+            <div class="t-item">
+              <div class="t-dot"></div>
+              <h5>Module 4 — Off‑Page, PR & Local</h5>
+              <p class="text-secondary mb-1">Digital PR, link systems, citations, GMB, internationalization.</p>
+              <small class="text-secondary">Playbooks + Outreach templates</small>
+            </div>
+            <div class="t-item">
+              <div class="t-dot"></div>
+              <h5>Module 5 — Analytics & Reporting</h5>
+              <p class="text-secondary mb-1">GA4, Looker dashboards, SEO forecasting, ROI storytelling.</p>
+              <small class="text-secondary">Reusable reporting frameworks</small>
+            </div>
+            <div class="t-item">
+              <div class="t-dot"></div>
+              <h5>Module 6 — Career Sprint</h5>
+              <p class="text-secondary mb-1">Portfolio builds, LinkedIn revamp, mock interviews, freelancing kit.</p>
+              <small class="text-secondary">Job checklists + offer prep</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="https://hiteshswami.com/step/seo-course-with-ai/" class="btn btn-brand btn-lg">Enroll & Get Syllabus PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="outcomes">
+    <div class="container">
+      <h2 class="section-title text-center">Learner Outcomes</h2>
+      <p class="section-sub text-center mb-5">What past cohorts achieved after completing this program.</p>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="gb h-100"><div class="inner p-4">
+            <div class="d-flex align-items-center gap-3">
+              <span class="badge rounded-pill bg-opacity-10" style="background:rgba(16,185,129,.15); border:1px solid rgba(16,185,129,.35); color:#34d399"><i class="bi bi-graph-up-arrow me-1"></i>Traffic Growth</span>
+            </div>
+            <p class="quote mt-3">“In 60 days, organic clicks 2.3× and 15 keywords to Top 3.”</p>
+            <div class="small text-secondary">Freelance Client Case — B2B SaaS</div>
+          </div></div>
+        </div>
+        <div class="col-lg-4">
+          <div class="gb h-100"><div class="inner p-4">
+            <span class="badge rounded-pill" style="background:rgba(59,130,246,.15); border:1px solid rgba(59,130,246,.35); color:#60a5fa"><i class="bi bi-award me-1"></i>Job Offers</span>
+            <p class="quote mt-3">“Cracked SEO Analyst role with portfolio projects from the course.”</p>
+            <div class="small text-secondary">Entry‑level Hire — E‑commerce</div>
+          </div></div>
+        </div>
+        <div class="col-lg-4">
+          <div class="gb h-100"><div class="inner p-4">
+            <span class="badge rounded-pill" style="background:rgba(245,158,11,.15); border:1px solid rgba(245,158,11,.35); color:#fbbf24"><i class="bi bi-cash-coin me-1"></i>Freelancing</span>
+            <p class="quote mt-3">“Landed 4 retainer clients using the outreach playbooks.”</p>
+            <div class="small text-secondary">Freelancer — Local Services</div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-5">
+          <div class="gb h-100"><div class="inner p-4 p-md-5 d-flex flex-column justify-content-between">
+            <div>
+              <h2 class="section-title">Cohort Pricing</h2>
+              <p class="section-sub">Join the next batch. Limited seats for personal feedback.</p>
+              <div class="d-flex align-items-end gap-3 mt-3">
+                <div class="price">₹5,500</div>
+                <div class="text-decoration-line-through text-secondary">₹7,500</div>
+              </div>
+              <ul class="mt-4 text-secondary">
+                <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>8+ weeks live training</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Projects, audits & SOPs</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>1:1 feedback & office hours</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Job prep & portfolio review</li>
+              </ul>
+            </div>
+            <div>
+              <a href="https://hiteshswami.com/step/seo-course-with-ai/" class="btn btn-brand btn-lg w-100"><i class="bi bi-bag-check me-2"></i>Enroll Now</a>
+              <div class="small text-secondary mt-3">Need help? WhatsApp/Call: +91 8054444117 • hello@hiteshswami.com</div>
+            </div>
+          </div></div>
+        </div>
+        <div class="col-lg-7">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="card-smooth p-4 h-100">
+                <h6 class="text-uppercase text-secondary">Bonuses</h6>
+                <ul class="mt-3 text-secondary">
+                  <li>Keyword clusterer sheet</li>
+                  <li>Content brief generator</li>
+                  <li>Internal linking planner</li>
+                  <li>Technical audit checklist</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card-smooth p-4 h-100">
+                <h6 class="text-uppercase text-secondary">Who is this for?</h6>
+                <ul class="mt-3 text-secondary">
+                  <li>Students & freshers</li>
+                  <li>Marketers & founders</li>
+                  <li>Freelancers & agencies</li>
+                  <li>Career switchers</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card-smooth p-4 h-100">
+                <h6 class="text-uppercase text-secondary">No forms. Enroll instantly.</h6>
+                <p class="mb-0 text-secondary">Click any Enroll button to visit <a href="https://hiteshswami.com/step/seo-course-with-ai/" class="link-light">hiteshswami.com</a> and complete payment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <h2 class="section-title text-center">Frequently Asked Questions</h2>
+      <p class="section-sub text-center mb-4">Short and clear answers. No fluff.</p>
+      <div class="accordion" id="faqAcc">
+        <div class="accordion-item bg-transparent text-white border rounded-3 overflow-hidden mb-3" style="border-color:rgba(255,255,255,.1)">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#f1">Is this beginner friendly?</button>
+          </h2>
+          <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+            <div class="accordion-body text-secondary">Yes. We start with fundamentals and quickly move to action with templates and tools.</div>
+          </div>
+        </div>
+        <div class="accordion-item bg-transparent text-white border rounded-3 overflow-hidden mb-3" style="border-color:rgba(255,255,255,.1)">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-transparent text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">Do I need coding?</button>
+          </h2>
+          <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body text-secondary">Basic HTML/JS helps, but we focus on practical fixes you can ship without deep dev skills.</div>
+          </div>
+        </div>
+        <div class="accordion-item bg-transparent text-white border rounded-3 overflow-hidden mb-3" style="border-color:rgba(255,255,255,.1)">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-transparent text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">Are there recordings?</button>
+          </h2>
+          <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body text-secondary">Yes, recordings are provided for missed sessions.</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="https://hiteshswami.com/step/seo-course-with-ai/" class="btn btn-brand btn-lg">Enroll Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5 class="fw-bold">Hitesh Swami</h5>
+          <p class="text-secondary mb-2">SEO Course with AI — Practical training to become job‑ready.</p>
+          <div class="small text-secondary">📞 +91 8054444117 &nbsp;•&nbsp; ✉ hello@hiteshswami.com</div>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-secondary text-uppercase">Navigate</h6>
+          <ul class="list-unstyled small">
+            <li><a class="link-light" href="#about">About</a></li>
+            <li><a class="link-light" href="#curriculum">Curriculum</a></li>
+            <li><a class="link-light" href="#pricing">Pricing</a></li>
+            <li><a class="link-light" href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-secondary text-uppercase">Enroll</h6>
+          <a href="https://hiteshswami.com/step/seo-course-with-ai/" class="btn btn-brand w-100">Go to Payment</a>
+        </div>
+      </div>
+      <div class="text-center text-secondary small mt-4">© 2025 Hitesh Swami. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA (mobile) -->
+  <div class="cta-float d-lg-none">
+    <div class="container">
+      <a href="https://hiteshswami.com/step/seo-course-with-ai/" class="btn btn-brand w-100 btn-lg"><i class="bi bi-lightning-charge me-2"></i>Enroll Now</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){ e.preventDefault(); document.querySelector(id)?.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+  </script>
+</body>
+</html>
